@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/pages/read_all.css">
     <link rel="stylesheet" href="../static/style.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -35,12 +36,14 @@
             {% for registro in registros%}
             <tr>
                 <td>{{ registro ["id"] }}</td>
-                <td>{{ registro ["chamada"]}}</td>
-                <td>
+                
+                <td><textarea class="texto">{{ registro ["chamada"]}}</textarea></td>
+                <td><textarea class="texto">
                     {{ registro ['paquera']}}
-                    
+                    </textarea>
                 </td>
-                <td><a href="/read/{{ registro.id}}" class="botao">Copiar</a></td>
+                
+                <td><a href="#" class="botao" id="copy">Copiar</a></td>
             </tr>
 
             {% endfor %}
@@ -49,5 +52,6 @@
 
 
     </div>
+    <script type="text/javascript" src="../static/index.js"></script>
 </body>
 </html>
