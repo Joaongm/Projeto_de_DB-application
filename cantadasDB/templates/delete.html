@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/pages/delete.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>CRUD - DELETE</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    {% if sucesso %}
+    <div class="bloco removido_sucesso">
+        <p>Registro excluído com sucesso.</p>
+    </div>
+
+    <div class="bloco">
+        <a href="/read" class="botao"> Visualizar todos os registros</a>
+    </div>
+
+    {% elif registro %}
+
+    <div class="bloco">
+        <h2>
+            Excluir registro
+        </h2>
+    </div>
+
+
+    <div class="bloco">
+        <p>
+            Tem certeza que deseja excluir <span class="highlight">{{registro.nome}}</span> dos registros?<br><br>
+            <a href="/delete/{{registro.id}}/confirmed" class="botao">Sim, por favor.</a>
+            <a href="/read" class="botao">Não, deixa pra lá.</a>
+        </p>
+
+    </div>
+
+
+    {% else %}
+
+    <div class="bloco">
+        <h2>Excluir registro</h2>
+    </div>
+
+    <div class="bloco">
+
+        <p>Não foi encontrado o filme com essa ID <br><br>
+            <a href="/read" class="botao"> Voltar para a lista</a>
+        
+        </p>
+    </div>
+
+
+    {% endif %}
+</body>
+</html>

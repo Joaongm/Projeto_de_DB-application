@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/pages/create.css">
+    <title>Crud - Adicionar registros</title>
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+
+    <div class="bloco">
+        <h2>Criar registros</h2>
+    </div>
+
+    {% if id_atribuido %}
+
+    <div class="bloco">
+
+        <p>registro criado com sucesso <br>
+            <br>
+            O id atribuído foi <span class="id_atribuido">{{id_atribuido}}</span>.<br>
+            <br>
+            <a href="/read/{{id_atribuido}}" class="botao">Visualizar este registro</a>
+        </p>
+
+    </div>
+
+    {% else %}
+
+    <div class="bloco">
+
+        <form class="form" method="POST">
+            <div class="bloco form_input">
+                <label for="chamada">Chamada:</label>
+                <input type="text" id="chamada" name="chamada" placeholder="Como vai chamar a atenção do crush?">
+            </div>
+
+            <div class="bloco form_input">
+                <label for="paquera"> Paquera:</label>
+                <input type="text" id="paquera" name="paquera" placeholder="E pra derreter o coração?">
+            </div>
+
+            <div class="bloco form_input">
+                
+                <input type="submit" class="botao" value="Enviar">
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+    {% endif %}
+</body>
+
+</html>
