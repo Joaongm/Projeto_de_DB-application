@@ -93,21 +93,21 @@ def read_all():
 
     return render_template('read_all.html',registros=registros)
 
+
 # def read_random(registro_id):
-#     registro= Filmes.read_all(registro_id)
+#     registro= Cantadas.read_all(registro_id)
 #     print(registro)
 
-# random = randint(0,10)
 
 
-@app.route(f'/read/<registro_id>')
+
+@app.route('/read/<registro_id>')
 def read_single(registro_id):
-    registro = Cantadas.read_all(registro_id)
+    registro = Cantadas.read_single(registro_id)
     print(registro)
-
     return render_template('read_single.html', registro=registro)
 
-#update
+# update
 
 @app.route('/update/<registro_id>',methods =('GET','POST'))
 
