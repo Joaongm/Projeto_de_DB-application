@@ -147,21 +147,41 @@ def delete_confirmed(registro_id):
 
     return render_template('delete.html', registro=registro, registro_id=registro_id, sucesso=sucesso)
 
-
-
-if __name__ =='__main__':
+@app.route('/sort')
+def cantada_aleatoria():
     resultadosCol2 = db.session.query(Cantadas)
     chamadas = []
     
     for resultado in resultadosCol2:
-        chamadas.append(resultado.chamada)
-    print(chamadas)
+       chamadas.append(resultado.chamada)
     
     resultadosCol3 = db.session.query(Cantadas)
     paqueras = []
     
     for resultado in resultadosCol3:
         paqueras.append(resultado.paquera)
-    print(chamadas)
+    
+    paquera_sorteada = paqueras[randint(0,4)]
+    chamada_sorteada = chamadas[randint(0,4)]
+    return render_template('read_single.html', paquera_sorteada=paquera_sorteada, chamada_sorteada=chamada_sorteada)
+
+
+if __name__ =='__main__':
+    #######################################################
+    # Funcionou! pegar colunas do banco em forma de lista!
+    # resultadosCol2 = db.session.query(Cantadas)
+    # chamadas = []
+    
+    # for resultado in resultadosCol2:
+    #     chamadas.append(resultado.chamada)
+    # print(chamadas)
+    
+    # resultadosCol3 = db.session.query(Cantadas)
+    # paqueras = []
+    
+    # for resultado in resultadosCol3:
+    #     paqueras.append(resultado.paquera)
+    # print(paqueras)
+    #######################################################
 
     app.run(debug=True)

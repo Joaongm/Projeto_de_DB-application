@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/pages/read_single.css">
-    <title>Crud parte 2</title>
+    <title>Sorteador de Cantada</title>
 </head>
+
 <body>
 
     {% include 'header.html' %}
 
     <div class="bloco">
-        <h2> {{registro.nome}}</h2>
+        <h2> {{ chamada_sorteada }}</h2>
     </div>
 
     <div class="bloco">
-        <img src="{{registro.imagem_url}}" alt="{{registro.nome}}">
+        <p> {{ paquera_sorteada }}</p>
     </div>
-    
+
 </body>
+
 </html>
