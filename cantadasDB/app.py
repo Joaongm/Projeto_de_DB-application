@@ -149,6 +149,19 @@ def delete_confirmed(registro_id):
 
 
 
-
 if __name__ =='__main__':
+    resultadosCol2 = db.session.query(Cantadas)
+    chamadas = []
+    
+    for resultado in resultadosCol2:
+        chamadas.append(resultado.chamada)
+    print(chamadas)
+    
+    resultadosCol3 = db.session.query(Cantadas)
+    paqueras = []
+    
+    for resultado in resultadosCol3:
+        paqueras.append(resultado.paquera)
+    print(chamadas)
+
     app.run(debug=True)
