@@ -1,9 +1,27 @@
+header {
+  flex: auto;
+  text-align: center;
+  display: absolute;
+  align-content: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 .tabela {
   border: 1px solid #bababa;
   border-spacing: 0;
   margin: 0 50px 20px;
   width: 100%;
   border-radius: 5px;
+}
+.texto {
+  padding: 20px;
+  max-width: 2vw;
+  min-width: 300px;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: left;
+
 }
 
 .tabela tr:nth-child(even) td {

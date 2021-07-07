@@ -94,20 +94,16 @@ def read_all():
     return render_template('read_all.html',registros=registros)
 
 
-# def read_random(registro_id):
-#     registro= Cantadas.read_all(registro_id)
-#     print(registro)
 
 
-
-
-@app.route('/read/<registro_id>')
+@app.route(f'/read/<registro_id>')
 def read_single(registro_id):
-    registro = Cantadas.read_single(registro_id)
+    registro = Cantadas.read_all(registro_id)
     print(registro)
+
     return render_template('read_single.html', registro=registro)
 
-# update
+#update
 
 @app.route('/update/<registro_id>',methods =('GET','POST'))
 
@@ -117,7 +113,7 @@ def update(registro_id):
 
     if request.method == 'POST':
         form = request.form
-        new_data = Cantadas(form['nome'], form['imagem_url'])
+        new_data = Cantadas(form['chamada'], form['paquera'])
         registro.update(new_data)
         sucesso = True
 
@@ -147,8 +143,47 @@ def delete_confirmed(registro_id):
 
     return render_template('delete.html', registro=registro, registro_id=registro_id, sucesso=sucesso)
 
+@app.route('/sort')
 
+### Random Read ####
+def cantada_aleatoria():
+    resultadosCol2 = db.session.query(Cantadas)
+    chamadas = []
+    
+    for resultado in resultadosCol2:
+       chamadas.append(resultado.chamada)
+    
+    resultadosCol3 = db.session.query(Cantadas)
+    paqueras = []
+    
+    for resultado in resultadosCol3:
+        paqueras.append(resultado.paquera)
+    
+    xp = len(paqueras)-1
+    xc = len(chamadas)-1
+    paquera_sorteada = paqueras[randint(0,xp)]
+    chamada_sorteada = chamadas[randint(0,xc)]
+    return render_template('read_single.html', paquera_sorteada=paquera_sorteada, chamada_sorteada=chamada_sorteada)
+   
+   
+#######################################################
+# Funcionou! pegar colunas do banco em forma de lista!
+# resultadosCol2 = db.session.query(Cantadas)
+# chamadas = []
+
+# for resultado in resultadosCol2:
+#     chamadas.append(resultado.chamada)
+# print(chamadas)
+
+# resultadosCol3 = db.session.query(Cantadas)
+# paqueras = []
+
+# for resultado in resultadosCol3:
+#     paqueras.append(resultado.paquera)
+# print(paqueras)
+#######################################################
 
 
 if __name__ =='__main__':
+
     app.run(debug=True)

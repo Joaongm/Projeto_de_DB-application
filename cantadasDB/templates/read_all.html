@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,12 @@
 
     <title>Document</title>
 </head>
+
 <body>
-    
-    
+
+
     {% include 'header.html' %}
-    
+
 
 
 
@@ -36,16 +38,23 @@
             {% for registro in registros%}
             <tr>
                 <td>{{ registro ["id"] }}</td>
-                
-                <td><textarea class="texto">{{ registro ["chamada"]}}</textarea></td>
-                <td><textarea class="texto">
-                    {{ registro ['paquera']}}
-                    </textarea>
-                </td>
-                
+
                 <td>
-                    <a href="#" class="botao" id="copy">Copiar</a>
-                    <a href="/read/{{registro.id}}" class="botao" id="random">aleatória</a>
+
+                    <!-- <input type="text" name="texto" class="texto" value="{{ registro ['chamada']}}" id="texto"> -->
+
+                    <div class="texto"></div>
+                    <textarea class="texto" >{{ registro ['chamada']}}</textarea>
+                </td>
+                                  </td>
+                <td>
+                    <!-- <input type="text" name="texto" class="texto" value="{{ registro ['paquera']}}" id="texto"> -->
+                    <textarea class="texto" >{{ registro ['paquera']}}</textarea>
+                </td>
+                <div class="text"></div>
+
+                <td>
+                    <a href="#" class="botao" id="copy" onclick="copiar_texto()">Copiar</a>
                 </td>
             </tr>
 
@@ -57,4 +66,5 @@
     </div>
     <script type="text/javascript" src="../static/index.js"></script>
 </body>
+
 </html>
