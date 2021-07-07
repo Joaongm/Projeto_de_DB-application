@@ -23,6 +23,34 @@ body {
 }
 .footer p{
   position: absolute;
+  background: #7c7c7c;
+  display: inline block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container.principal{
+  width: 33%
+}
+.bloco.frase{
+  display: block;
+}
+.bloco.titulo{
+  display: block;
+}
+.retrato{
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .bloco {
@@ -51,3 +79,4 @@ body {
   background-color: #cd27ff;
   filter: brightness(1.2);
 }
+

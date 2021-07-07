@@ -10,24 +10,23 @@
     <title>Com sorte</title>
 </head>
 
-<body>
+<body onload="iniciar()">
 
     {% include 'header.html' %}
 
     <div class="bola top"></div>
     <div class="bola bottom"></div>
     <div class="bloco">
-        <h2><span id="texto"> {{chamada_sorteada}}</h2>
+        <h2 id="chamada">{{chamada_sorteada}}</h2>
     </div>
 
 
     <div class="bloco">
-        <p> {{paquera_sorteada}}</p></span>
+        <h2 id="paquera">{{paquera_sorteada}}</h2>
     </div>
 
-
     <div class="bloco">
-        <a class="botao" id="copy" onclick="copiar_texto()">Copiar</a>
+        <button class="botao" id="copy">Copiar</button>
     </div>
 
     <div class="bola">
@@ -36,5 +35,6 @@
 
     {% include 'footer.html' %}
 </body>
+<script type="text/javascript" src="../static/index.js"></script>
 
 </html>

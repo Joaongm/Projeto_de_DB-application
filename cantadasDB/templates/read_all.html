@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="iniciar()">
 
 
     {% include 'header.html' %}
@@ -38,26 +38,21 @@
             {% for registro in registros%}
             <tr>
                 <td>{{ registro ["id"] }}</td>
-
                 <td>
-
                     <!-- <input type="text" name="texto" class="texto" value="{{ registro ['chamada']}}" id="texto"> -->
-
                     <div class="texto"></div>
-                    <textarea class="texto" >{{ registro ['chamada']}}</textarea>
+                    <textarea class="texto" id="chamada">{{ registro ['chamada']}}</textarea>
                 </td>
-                                  </td>
+                </td>
                 <td>
                     <!-- <input type="text" name="texto" class="texto" value="{{ registro ['paquera']}}" id="texto"> -->
-                    <textarea class="texto" >{{ registro ['paquera']}}</textarea>
+                    <textarea class="texto" id="paquera">{{ registro ['paquera']}}</textarea>
                 </td>
                 <div class="text"></div>
-
                 <td>
-                    <a href="#" class="botao" id="copy" onclick="copiar_texto()">Copiar</a>
+                    <button class="botao" id="copy" onclick="copiar_texto()">Copiar</button>
                 </td>
             </tr>
-
             {% endfor %}
 
         </table>

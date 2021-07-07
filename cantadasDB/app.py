@@ -96,7 +96,7 @@ def read_all():
 
 
 
-@app.route(f'/read/<registro_id>')
+@app.route('/read/<registro_id>')
 def read_single(registro_id):
     registro = Cantadas.read_all(registro_id)
     print(registro)
@@ -157,8 +157,7 @@ def cantada_aleatoria():
     for resultado in resultados:
        chamadas.append(resultado.chamada)
        paqueras.append(resultado.paquera)
-
-    
+       
     xp = len(paqueras)-1
     xc = len(chamadas)-1
     paquera_sorteada = paqueras[randint(0,xp)]
