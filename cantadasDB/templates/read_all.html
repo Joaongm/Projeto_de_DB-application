@@ -7,28 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/pages/read_all.css">
     <link rel="stylesheet" href="../static/style.css">
+
     <title>Document</title>
 </head>
 
 <body>
+
+
     {% include 'header.html' %}
+
+
+
+
     <div class="titulo">
         <h2>Visualizar todos os registros</h2>
+
+
     </div>
+
+
+
     <div class="bloco">
         <table class="tabela">
             <tr class="tabela_header">
                 <td>ID</td>
                 <td>Chamada</td>
-                <td>ID</td>
                 <td>Paquera</td>
+                <td>Ações</td>
             </tr>
             {% for registro in registros%}
             <tr>
-                <td>{{ registro ['id'] }}</td>
-                <td>{{ registro ['chamada']}}</td>
-                <td>{{ registro ['paquera']}}</td>
-                <td><a href="/read/{{ registro.id}}" class="botao">Copiar</a></td>
+                <td>{{ registro ["id"] }}</td>
+
+                <td>
+
+                    <!-- <input type="text" name="texto" class="texto" value="{{ registro ['chamada']}}" id="texto"> -->
+
+                    <div class="texto"></div>
+                    <textarea class="texto" >{{ registro ['chamada']}}</textarea>
+                </td>
+                                  </td>
+                <td>
+                    <!-- <input type="text" name="texto" class="texto" value="{{ registro ['paquera']}}" id="texto"> -->
+                    <textarea class="texto" >{{ registro ['paquera']}}</textarea>
+                </td>
+                <div class="text"></div>
+
+                <td>
+                    <a href="#" class="botao" id="copy" onclick="copiar_texto()">Copiar</a>
+                </td>
             </tr>
 
             {% endfor %}
@@ -37,6 +64,7 @@
 
 
     </div>
+    <script type="text/javascript" src="../static/index.js"></script>
 </body>
 
 </html>
