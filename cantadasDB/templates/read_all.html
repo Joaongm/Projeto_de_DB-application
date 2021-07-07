@@ -37,20 +37,24 @@
             </tr>
             {% for registro in registros%}
             <tr>
-                <td>{{ registro ["id"] }}</td>
+                <td>{{ registro.id }}</td>
                 <td>
                     <!-- <input type="text" name="texto" class="texto" value="{{ registro ['chamada']}}" id="texto"> -->
                     <div class="texto"></div>
-                    <p class="texto" id="chamada">{{ registro ['chamada']}}</p>
+
+                    <p class="texto" id="chamada">{{ registro.chamada }}</p>
+
                 </td>
                 </td>
                 <td>
                     <!-- <input type="text" name="texto" class="texto" value="{{ registro ['paquera']}}" id="texto"> -->
-                    <p class="texto" id="paquera">{{ registro ['paquera']}}</p>
+
+                    <p class="texto" id="paquera">{{ registro.paquera }}</p>
                 </td>
                 <div class="text"></div>
                 <td>
-                    <button class="botao copiar" id="copy" >Copiar</button>
+                    <a href="/read/{{registro.id}}" class="botao" id="verCantada">Ver Cantada</button>
+
                 </td>
             </tr>
             {% endfor %}
@@ -59,8 +63,11 @@
 
 
     </div>
+
     {% include 'footer.html' %}
-    <script type="text/javascript" src="../static/index.js"></script>
+
+    <script type=" text/javascript" src="../static/index.js"></script>
+
 </body>
 
 </html>

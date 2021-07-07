@@ -68,7 +68,7 @@ def create():
         form = request.form
 
 
-        registro = Cantadas(form['nome'],form['imagem_url'])
+        registro = Cantadas(form['chamada'],form['paquera'])
         registro.save()
 
         id_atribuido= registro.id
@@ -98,9 +98,7 @@ def read_all():
 
 @app.route('/read/<registro_id>')
 def read_single(registro_id):
-    registro = Cantadas.read_all(registro_id)
-    print(registro)
-
+    registro = Cantadas.read_single(registro_id)
     return render_template('read_single.html', registro=registro)
 
 #update
@@ -162,7 +160,7 @@ def cantada_aleatoria():
     xc = len(chamadas)-1
     paquera_sorteada = paqueras[randint(0,xp)]
     chamada_sorteada = chamadas[randint(0,xc)]
-    return render_template('read_single.html', paquera_sorteada=paquera_sorteada, chamada_sorteada=chamada_sorteada)
+    return render_template('read_rand.html', paquera_sorteada=paquera_sorteada, chamada_sorteada=chamada_sorteada)
    
    
 #######################################################

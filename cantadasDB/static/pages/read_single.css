@@ -6,8 +6,6 @@ body{
     background-color: rgb(19, 12, 29);
 }
 
-
-
     
 .bola{
     width: 21.2rem;
@@ -34,3 +32,8 @@ body{
 
 
 }
+
+#output{
+    visibility: hidden;
+}
+
