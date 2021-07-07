@@ -41,16 +41,16 @@
                 <td>
                     <!-- <input type="text" name="texto" class="texto" value="{{ registro ['chamada']}}" id="texto"> -->
                     <div class="texto"></div>
-                    <textarea class="texto" id="chamada">{{ registro ['chamada']}}</textarea>
+                    <p class="texto" id="chamada">{{ registro ['chamada']}}</p>
                 </td>
                 </td>
                 <td>
                     <!-- <input type="text" name="texto" class="texto" value="{{ registro ['paquera']}}" id="texto"> -->
-                    <textarea class="texto" id="paquera">{{ registro ['paquera']}}</textarea>
+                    <p class="texto" id="paquera">{{ registro ['paquera']}}</p>
                 </td>
                 <div class="text"></div>
                 <td>
-                    <button class="botao" id="copy" onclick="copiar_texto()">Copiar</button>
+                    <button class="botao copiar" id="copy" >Copiar</button>
                 </td>
             </tr>
             {% endfor %}
