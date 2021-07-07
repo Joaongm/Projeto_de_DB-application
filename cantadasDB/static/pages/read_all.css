@@ -25,7 +25,7 @@ header {
 }
 
 .tabela tr:nth-child(even) td {
-  background: #fff;
+  background: #858585;
 }
 
 .tabela td {

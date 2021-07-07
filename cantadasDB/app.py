@@ -96,7 +96,7 @@ def read_all():
 
 
 
-@app.route(f'/read/<registro_id>')
+@app.route('/read/<registro_id>')
 def read_single(registro_id):
     registro = Cantadas.read_all(registro_id)
     print(registro)
@@ -147,18 +147,14 @@ def delete_confirmed(registro_id):
 
 ### Random Read ####
 def cantada_aleatoria():
-    resultadosCol2 = db.session.query(Cantadas)
+    resultados = db.session.query(Cantadas)
     chamadas = []
-    
-    for resultado in resultadosCol2:
-       chamadas.append(resultado.chamada)
-    
-    resultadosCol3 = db.session.query(Cantadas)
     paqueras = []
     
-    for resultado in resultadosCol3:
-        paqueras.append(resultado.paquera)
-    
+    for resultado in resultados:
+       chamadas.append(resultado.chamada)
+       paqueras.append(resultado.paquera)
+       
     xp = len(paqueras)-1
     xc = len(chamadas)-1
     paquera_sorteada = paqueras[randint(0,xp)]
