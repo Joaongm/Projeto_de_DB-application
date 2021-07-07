@@ -146,18 +146,18 @@ def delete_confirmed(registro_id):
 @app.route('/sort')
 
 ### Random Read ####
+
+
+
 def cantada_aleatoria():
-    resultadosCol2 = db.session.query(Cantadas)
+    resultados = db.session.query(Cantadas)
     chamadas = []
-    
-    for resultado in resultadosCol2:
-       chamadas.append(resultado.chamada)
-    
-    resultadosCol3 = db.session.query(Cantadas)
     paqueras = []
     
-    for resultado in resultadosCol3:
-        paqueras.append(resultado.paquera)
+    for resultado in resultados:
+       chamadas.append(resultado.chamada)
+       paqueras.append(resultado.paquera)
+
     
     xp = len(paqueras)-1
     xc = len(chamadas)-1

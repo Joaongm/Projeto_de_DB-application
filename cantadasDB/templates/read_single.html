@@ -14,20 +14,27 @@
 
     {% include 'header.html' %}
 
-
+    <div class="bola top"></div>
+    <div class="bola bottom"></div>
     <div class="bloco">
-        <h2><span id=""> {{chamada_sorteada}}</h2>
+        <h2><span id="texto"> {{chamada_sorteada}}</h2>
     </div>
 
 
     <div class="bloco">
-        <p> {{paquera_sorteada}}</p>
+        <p> {{paquera_sorteada}}</p></span>
     </div>
 
 
     <div class="bloco">
-        <a href="#" class="botao" id="copy" onclick="copiar_texto()">Copiar</a>
+        <a class="botao" id="copy" onclick="copiar_texto()">Copiar</a>
     </div>
+
+    <div class="bola">
+
+    </div>
+
+    {% include 'footer.html' %}
 </body>
 
 </html>

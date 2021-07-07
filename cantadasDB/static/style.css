@@ -10,7 +10,19 @@ body {
 
 .header {
   padding-top: 20px;
-  background: #ffffff;
+  background: #5a5959;
+}
+
+.footer {
+  max-height: .1vh, 10px;
+  padding-bottom: 10px;
+  font-size: .8rem;
+  justify-content: bottom;
+  align-items: baseline;
+  margin-top: 150px;
+}
+.footer p{
+  position: absolute;
 }
 
 .bloco {

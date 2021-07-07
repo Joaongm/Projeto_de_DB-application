@@ -35,3 +35,37 @@
     font-weight: bold;
     padding: 5px 20px;
   }
+  
+    
+.bola{
+  width: 21.2rem;
+  height: 21.2rem;
+  clip-path: circle();
+  background: rgb(88, 12, 160);
+  position: fixed;
+  opacity: 0.2;
+
+}
+.bola2{
+  width: 23.2rem;
+  height: 26.2rem;
+  clip-path: circle();
+  background: rgb(160, 12, 123);
+  position: fixed;
+  opacity: 0.1;
+}
+.bola.top{
+  top: -46rem;
+  width: 43.3rem;
+  height: 23.3rem;
+  right: -35rem;
+
+
+}
+
+.bola.bottom{
+  bottom: -15rem;
+  right: 3.6rem;
+
+
+}
