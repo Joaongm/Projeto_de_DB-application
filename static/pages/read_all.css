@@ -10,7 +10,7 @@ header {
 .tabela {
   border: 1px solid #bababa;
   border-spacing: 0;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   width: 90%;
   border-radius: 5px;
 }
