@@ -3,7 +3,43 @@
     
 }
 body{
-    background-color: rgb(33, 50, 80);
+    background-color: rgb(19, 12, 29);
+}
+
+    
+.bola{
+    width: 21.2rem;
+    height: 21.2rem;
+    clip-path: circle();
+    background: rgb(88, 12, 160);
+    position: fixed;
+    opacity: 0.3;
+
+}
+
+.bola.top{
+    top: -46rem;
+    width: 43.3rem;
+    height: 23.3rem;
+    right: -35rem;
+
+
+}
+
+.bola.bottom{
+    bottom: -5rem;
+    right: 3.6rem;
+    animation: ease;
+    transition: ease-in-out;
+
+}
+
+.bola.bottom2{
+    bottom: -15rem;
+    right: 10.6rem;
+    animation: 1s ease 3s;
+    transition: 2s ease-in-out 3s;
+
 }
 
 #output{

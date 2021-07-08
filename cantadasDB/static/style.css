@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-  background: #292929;
+  background: rgb(19, 12, 29);
   font-family: "Montserrat", sans-serif;
   color: beige;
   margin: 0;
@@ -11,6 +11,9 @@ body {
 .header {
   padding-top: 20px;
   background: #5a5959;
+}
+.header a{
+   text-decoration: none;
 }
 
 .footer {
@@ -88,3 +91,7 @@ body {
   filter: brightness(1.2);
 }
 
+.botao:active{
+  background-color: #490f5a;
+  
+}
