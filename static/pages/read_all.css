@@ -85,6 +85,9 @@ img {
   td{
     font-size: 0.4rem;
   }
+
+
+  
   th,td{
 
     font-size: 0.6rem;
@@ -92,9 +95,14 @@ img {
     max-height: 30px;
     justify-content: left;
   }
+
+
+
   th{
     width: 10%;
   }
+
+
   .texto {
     display: flex;
     justify-content: left;
