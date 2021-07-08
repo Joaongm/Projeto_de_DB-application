@@ -6,75 +6,78 @@ header {
   margin: 0 auto;
   justify-content: center;
 }
-
-.tabela {
-  border: 1px solid #bababa;
-  border-spacing: 0;
-  margin: 0 50px 20px;
-  width: 100%;
-  border-radius: 5px;
-}
-.texto {
-  padding: 20px;
-  max-width: 2vw;
-  min-width: 300px;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: left;
-  font-size: 12 bold;
-
-}
-
-.tabela tr:nth-child(even) td {
-  background: #858585;
-}
-
-.tabela td {
-  padding: 10px;
-}
-
-.tabela_header td {
-  font-weight: bold;
-  align-items: center;
-}
-
-img {
-  max-width: 200px;
-  max-height: 100px;
-}
-.titulo{
-  display: absolute;
-  align-content: center;
-  margin: 0 auto;
-  justify-content: center;
-  text-align: center;
-
-}
-
-
+@media (max-width:870px ){
+  .tabela {
+    display: flex;
+    border: 1px solid #bababa;
+    border-spacing: 0;
+    margin: 0 50px 20px;
+    width: 100%;
+    border-radius: 5px;
     
-.bola{
-  width: 21.2rem;
-  height: 21.2rem;
-  clip-path: circle();
-  background: rgb(88, 12, 160);
-  position: fixed;
-  opacity: 0.3;
+  }
+  .texto {
+    padding: 20px;
+    max-width: 2vw;
+    min-width: 300px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: left;
+    font-size: 12 bold;
 
-}
+  }
 
-.bola.top{
-  top: -46rem;
-  width: 43.3rem;
-  height: 23.3rem;
-  right: -35rem;
+  .tabela tr:nth-child(even) td {
+    background: #858585;
+  }
+
+  .tabela td {
+    padding: 10px;
+  }
+
+  .tabela_header td {
+    font-weight: bold;
+    align-items: center;
+  }
+
+  img {
+    max-width: 200px;
+    max-height: 100px;
+  }
+  .titulo{
+    display: absolute;
+    align-content: center;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+
+  }
 
 
-}
+      
+  .bola{
+    width: 21.2rem;
+    height: 21.2rem;
+    clip-path: circle();
+    background: rgb(88, 12, 160);
+    position: fixed;
+    opacity: 0.3;
 
-.bola.bottom{
-  bottom: -15rem;
-  right: 3.6rem;
+  }
+
+  .bola.top{
+    top: -46rem;
+    width: 43.3rem;
+    height: 23.3rem;
+    right: -35rem;
 
 
+  }
+
+  .bola.bottom{
+    bottom: -15rem;
+    right: 3.6rem;
+
+
+  }
 }
