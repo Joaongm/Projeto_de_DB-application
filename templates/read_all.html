@@ -27,7 +27,7 @@
 
 
 
-    <div class="bloco">
+    <div>
         <table class="tabela">
             <tr class="tabela_header">
                 <td>ID</td>
@@ -39,19 +39,16 @@
             <tr>
                 <td>{{ registro.id }}</td>
                 <td>
-                    <!-- <input type="text" name="texto" class="texto" value="{{ registro ['chamada']}}" id="texto"> -->
-                    <div class="texto"></div>
+                    
 
                     <p class="texto" id="chamada">{{ registro.chamada }}</p>
 
                 </td>
                 </td>
                 <td>
-                    <!-- <input type="text" name="texto" class="texto" value="{{ registro ['paquera']}}" id="texto"> -->
-
+               
                     <p class="texto" id="paquera">{{ registro.paquera }}</p>
                 </td>
-                <div class="text"></div>
                 <td>
                     <a href="/read/{{registro.id}}" class="botao" id="verCantada">Ver Cantada</button>
 
